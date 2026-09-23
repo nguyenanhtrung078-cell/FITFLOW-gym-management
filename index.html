@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FITFLOW | Quản lý phòng gym</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section id="loginScreen" class="login-screen">
+    <div class="login-art"><div class="brand"><span class="brand-mark">F</span> FITFLOW</div><div><p class="eyebrow">QUẢN LÝ HIỆU QUẢ</p><h1>Nâng tầm<br>trung tâm của bạn.</h1><p>Quản lý thành viên, lịch tập và doanh thu trên một không gian trực quan.</p></div><div class="login-stat"><b>1.248</b><span>Buổi tập được ghi nhận tháng này</span></div></div>
+    <form id="loginForm" class="login-card"><div class="mobile-brand"><span class="brand-mark">F</span> FITFLOW</div><p class="eyebrow">CỔNG QUẢN TRỊ</p><h2>Chào mừng trở lại</h2><p class="muted">Đăng nhập để điều hành phòng gym của bạn.</p><label>Email quản trị<input id="email" type="email" value="admin@fitflow.vn" required></label><label>Mật khẩu<input id="password" type="password" value="admin123" required></label><div class="form-row"><label class="check"><input type="checkbox" checked> Ghi nhớ đăng nhập</label><a href="#">Quên mật khẩu?</a></div><button class="primary wide" type="submit">Đăng nhập <span>→</span></button><p class="demo">Tài khoản mẫu: admin@fitflow.vn / admin123</p></form>
+  </section>
+  <main id="app" class="app hidden">
+    <aside class="sidebar"><div class="brand"><span class="brand-mark">F</span> FITFLOW</div><nav><p>MENU CHÍNH</p><a class="nav-item active" data-page="dashboard">▦ <span>Tổng quan</span></a><a class="nav-item" data-page="members">♙ <span>Hội viên</span></a><a class="nav-item" data-page="packages">◇ <span>Gói tập</span></a><a class="nav-item" data-page="schedule">▣ <span>Lịch tập</span></a><a class="nav-item" data-page="attendance">✓ <span>Điểm danh</span></a><a class="nav-item" data-page="payments">▤ <span>Thanh toán</span></a><p>HỖ TRỢ THÔNG MINH</p><a class="nav-item" data-page="ai">✦ <span>Trợ lý AI</span></a><a class="nav-item" data-page="reports">▥ <span>Báo cáo</span></a></nav><div class="profile"><div class="avatar">AN</div><div><b>Admin Nguyễn</b><small>Quản trị viên</small></div><button id="logout" title="Đăng xuất">↪</button></div></aside>
+    <section class="content"><header><div><button id="menuBtn" class="menu-btn">☰</button><p class="crumb">TRANG CHỦ / <span id="crumb">TỔNG QUAN</span></p><h2 id="pageTitle">Tổng quan</h2></div><div class="header-actions"><button class="icon-btn">⌕</button><button class="icon-btn notice">♧</button><button class="primary" id="quickAdd">+ Thêm mới</button></div></header><div id="pageContent"></div></section>
+  </main>
+  <div id="modal" class="modal hidden"><div class="modal-card"><button class="close">×</button><div id="modalContent"></div></div></div>
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
